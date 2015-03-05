@@ -408,7 +408,7 @@ function CT_Mail_ProcessQueue(elapsed)
 		return;
 	end
 	this.sendmail = this.sendmail + elapsed;
-	if ( this.sendmail > 0.5 ) then
+	if ( this.sendmail > 0 ) then
 		this.sendmail = 0;
 		if ( this.total > 0 ) then
 			CT_Mail_SendMail();

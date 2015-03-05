@@ -1,6 +1,6 @@
 tinsert(UISpecialFrames, "CT_MMInbox_OpenAll");
-CT_MMINBOX_DELETEDELAY = 1;
-CT_MMINBOX_DELETEEVENTDELAY = 1;
+CT_MMINBOX_DELETEDELAY = 0;
+CT_MMINBOX_DELETEEVENTDELAY = 0;
 
 CT_MMInbox_SelectedItems = { };
 function CT_MMInbox_OnLoad()
@@ -66,7 +66,7 @@ function CT_MMInbox_OnUpdate(elapsed)
 				DeleteInboxItem(this.delete[2]);
 			end
 			this.delete = nil;
-			this.elapsed = 0.5+CT_MMINBOX_DELETEDELAY;
+			this.elapsed = 0.3+CT_MMINBOX_DELETEDELAY;
 		end
 	end
 end
